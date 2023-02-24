@@ -10,7 +10,7 @@ by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! This project aims to investigate whether there is a correlation between the number of ingredients a recipe needs to cook and how highly it is rated by users. Our research is centered around the question: 
 
-The dataset used for this analysis contains information on a variety of recipes, including their ingredients, cooking times, and user ratings. By exploring this data, we hope to gain insights into the factors that contribute to a recipe's success and popularity. This dataset contains recipes and ratings from <a href='food.com'> food.com </a>.
+The dataset used for this analysis contains information on a variety of recipes, including their ingredients, cooking times, and user ratings. By exploring this data, we hope to gain insights into the factors that contribute to a recipe's success and popularity. This dataset contains recipes and ratings from <a href='food.com'> food.com</a>.
 
 This website will serve as a platform to share our findings and visualizations with others. It will include an overview of the project, a description of the dataset and methodology, interactive visualizations, and a conclusion summarizing our key findings.
 
