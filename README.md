@@ -102,7 +102,7 @@ Grouping the number of ingredients and examining the aggregate statistics mean c
 
 The columns in the ``recipes`` DataFrame that contain missing values are: ``name``, ``description``, and ``avg_rating``.
 
-Here, we will conduct permutation tests on two columns against the ``description_missing`` column in order to determine whether the ``description`` column is Missing at Random (MAR) since it would depend on the values of that other column. In order to conduct the test, we will consider the following hypotheses with an $\alpha$ of 0.05:
+Here, we will conduct permutation tests on two columns against the ``description_missing`` column in order to determine whether the ``description`` column is Missing at Random (MAR) since it would depend on the values of that other column. In order to conduct the test, we will consider the following hypotheses with an 𝛼 of 0.05:
 
 * **Null Hypothesis:** There is no significant difference between the two distributions of the column when the description is missing or not missing.
 * **Alternate Hypothesis:** There is a significant difference between the distributions of the column when the description is missing vs. when the description is not missing.
