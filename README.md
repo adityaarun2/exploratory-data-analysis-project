@@ -8,7 +8,7 @@ by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ## Introduction
 
-Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! This project aims to investigate whether there is a correlation between the number of ingredients a recipe needs to cook and how highly it is rated by users. Our research is centered around the question: 
+Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! This project aims to investigate whether there is a correlation between the number of ingredients a recipe needs to cook and how highly it is rated by users.
 
 The dataset used for this analysis contains information on a variety of recipes, including their ingredients, cooking times, and user ratings. By exploring this data, we hope to gain insights into the factors that contribute to a recipe's success and popularity. This dataset contains recipes and ratings from <a href='food.com'> food.com</a>.
 
@@ -91,14 +91,16 @@ Below is a bar chart which examines the mean avg_rating for simple recipes vs. c
 Grouping the number of ingredients and examining the aggregate statistics mean can help us to understand if there is a relationship between the complexity of a recipe (as indicated by the number of ingredients) and its cooking time and rating. This is because recipes with a higher number of ingredients may require longer cooking times, but may also result in more complex and flavorful dishes, leading to higher ratings. By grouping the recipes based on the number of ingredients and calculating the average cooking time and rating for each group, we can identify any patterns or trends in the data and determine if there is a correlation between the number of ingredients, cooking time, and rating. This can help us to make more informed decisions about recipe development, as well as provide insights into the preferences of consumers when it comes to recipe complexity and cooking time.
 
 
-|   minutes |   n_steps |   n_ingredients |   avg_rating |   calories |   total_fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated_fat (PDV) |   carbohydrates (PDV) |
-|----------:|----------:|----------------:|-------------:|-----------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|
-|   96.9493 |  12.6287  |        12.7353  |      4.62307 |    503.609 |           38.6573 |       69.3078 |        33.3543 |         41.6396 |               46.1697 |               15.71   |
-|  106.663  |   8.20179 |         6.55755 |      4.62708 |    374.326 |           28.0727 |       68.1805 |        25.6126 |         26.7148 |               35.7703 |               12.3359 |
+| complexity   |   minutes |   n_steps |   n_ingredients |   avg_rating |   calories |   total_fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated_fat (PDV) |   carbohydrates (PDV) |
+|:-------------|----------:|----------:|----------------:|-------------:|-----------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|
+| complex      |   96.9493 |  12.6287  |        12.7353  |      4.62307 |    503.609 |           38.6573 |       69.3078 |        33.3543 |         41.6396 |               46.1697 |               15.71   |
+| simple       |  106.663  |   8.20179 |         6.55755 |      4.62708 |    374.326 |           28.0727 |       68.1805 |        25.6126 |         26.7148 |               35.7703 |               12.3359 |
 
 ---
 
 ## Assessment of Missingness
+
+### NMAR Analysis
 
 The columns in the ``recipes`` DataFrame that contain missing values are: ``name``, ``description``, and ``avg_rating``.
 
@@ -108,6 +110,25 @@ Here, we will conduct permutation tests on two columns against the ``description
 * **Alternate Hypothesis:** There is a significant difference between the distributions of the column when the description is missing vs. when the description is not missing.
 
 Additionally, we will be using the **absolute difference of means** as our test statistic in this permutation test since we are dealing with quantitative distributions.
+
+### Missingness Dependency
+
+(present and interpret results of your missingness permutation tests with respect to data and question, embed a plotly plot related to missingness exploration)
+
+---
+
+## Hypothesis Testing
+
+To answer our overarching question, we will conduct a permutation test because we are trying to determine whether complex and simple recipes are drawn from the same distribution. We will conduct the test utilizing the following pair of hypotheses under a significance level of 𝛼 = 0.05:
+
+* **Null Hypothesis:** There is no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes.
+* **Alternate Hypothesis:** There is a difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes.
+
+Lastly, in order to measure the difference, we will be using a **absolute difference of means** test statistic because we are comparing two quantitative distributions.
+
+(Embed a visualization related to your hypothesis test in your website)
+
+---
 
 ## Conclusion
 
