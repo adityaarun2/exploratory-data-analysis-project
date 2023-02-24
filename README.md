@@ -1,6 +1,6 @@
 # Exploring the Connection between Cooking Time and Recipe Ratings
 
-February 23, 2023
+February 23, 2023 \
 by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ---
