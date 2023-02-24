@@ -74,16 +74,16 @@ Here, we remove an outlier recipe that is not really a recipe, but rather a dati
 
 Below is the histogram representing the distribution of values for the n_ingredients column. This helps give us a deeper understanding of how many ingredients are contained in each recipe and also explains why 9 ingredients is a good cutoff for determining whether a dish is complex or simple. The red line represents the median value of the distribution and, as you can see, it is centered around 9.<br>
 
-<iframe src="https://github.com/adityaarun2/exploratory-data-analysis-project/blob/main/univariateplot1.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="univariateplot1.html" width=800 height=600 frameBorder=0></iframe> 
 <br><br>
 Below is a histogram showing the distribution of avg_rating for all the recipes. As you can see, the red line represents the mean average rating across all recipes. This plot will be helpful for explaining the bivariate analysis as well. <br><br>
 
-<iframe src="https://github.com/adityaarun2/exploratory-data-analysis-project/blob/main/univariateplot2.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="univariateplot2.html" width=800 height=600 frameBorder=0></iframe> 
 
 ### Bivariate Analysis
 
 Below is a bar chart which examines the mean avg_rating for simple recipes vs. complex recipes. The plot shows that the mean is about the same for each group because, as seen in the histogram above, most of the ratings across all recipes are 5. Therefore, when we group the number of ingredients, we would expect that the average rating across groups is close to 5.<br>
 
-<iframe src="https://github.com/adityaarun2/exploratory-data-analysis-project/blob/main/bivariateplot1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="bivariateplot1.html" width=800 height=600 frameBorder=0></iframe>
 
 ---
