@@ -1,4 +1,4 @@
-  # Exploring the Connection between Cooking Ingredients and Recipe Ratings
+# Exploring the Connection between Cooking Ingredients and Recipe Ratings
 
 February 23, 2023 \
 https://adityaarun2.github.io/exploratory-data-analysis-project/ \
