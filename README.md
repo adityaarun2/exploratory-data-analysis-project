@@ -1,6 +1,7 @@
 # Exploring the Connection between Cooking Time and Recipe Ratings
 
 February 23, 2023 \
+https://adityaarun2.github.io/exploratory-data-analysis-project/ \
 by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ---
