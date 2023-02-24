@@ -87,4 +87,25 @@ Below is a bar chart which examines the mean avg_rating for simple recipes vs. c
 <iframe src="bivariateplot1.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Interesting Aggregates
+
+Grouping the number of ingredients and examining the aggregate statistics mean can help us to understand if there is a relationship between the complexity of a recipe (as indicated by the number of ingredients) and its cooking time and rating. This is because recipes with a higher number of ingredients may require longer cooking times, but may also result in more complex and flavorful dishes, leading to higher ratings. By grouping the recipes based on the number of ingredients and calculating the average cooking time and rating for each group, we can identify any patterns or trends in the data and determine if there is a correlation between the number of ingredients, cooking time, and rating. This can help us to make more informed decisions about recipe development, as well as provide insights into the preferences of consumers when it comes to recipe complexity and cooking time.
+
+
+|   minutes |   n_steps |   n_ingredients |   avg_rating |   calories |   total_fat (PDV) |   sugar (PDV) |   sodium (PDV) |   protein (PDV) |   saturated_fat (PDV) |   carbohydrates (PDV) |
+|----------:|----------:|----------------:|-------------:|-----------:|------------------:|--------------:|---------------:|----------------:|----------------------:|----------------------:|
+|   96.9493 |  12.6287  |        12.7353  |      4.62307 |    503.609 |           38.6573 |       69.3078 |        33.3543 |         41.6396 |               46.1697 |               15.71   |
+|  106.663  |   8.20179 |         6.55755 |      4.62708 |    374.326 |           28.0727 |       68.1805 |        25.6126 |         26.7148 |               35.7703 |               12.3359 |
+
 ---
+
+## Assessment of Missingness
+
+The columns in the ``recipes`` DataFrame that contain missing values are: ``name``, ``description``, and ``avg_rating``.
+
+Here, we will conduct permutation tests on two columns against the ``description_missing`` column in order to determine whether the ``description`` column is Missing at Random (MAR) since it would depend on the values of that other column. In order to conduct the test, we will consider the following hypotheses with an $\alpha$ of 0.05:
+
+* **Null Hypothesis:** There is no significant difference between the two distributions of the column when the description is missing or not missing.
+* **Alternate Hypothesis:** There is a significant difference between the distributions of the column when the description is missing vs. when the description is not missing.
+
+Additionally, we will be using the **Total Variation Distance (TVD)** as our test statistic in this permutation test since we are dealing with a categorical distribution.
+
