@@ -1,4 +1,4 @@
-# Exploring the Connection between Cooking Time and Recipe Ratings
+  # Exploring the Connection between Cooking Ingredients and Recipe Ratings
 
 February 23, 2023 \
 https://adityaarun2.github.io/exploratory-data-analysis-project/ \
@@ -8,7 +8,7 @@ by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ## Introduction
 
-Welcome to the exploratory data analysis project on the relationship between cooking time and average rating of recipes! This project aims to investigate whether there is a correlation between how long a recipe takes to cook and how highly it is rated by users. Our research is centered around the question: 
+Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! This project aims to investigate whether there is a correlation between the number of ingredients a recipe needs to cook and how highly it is rated by users. Our research is centered around the question: 
 
 The dataset used for this analysis contains information on a variety of recipes, including their ingredients, cooking times, and user ratings. By exploring this data, we hope to gain insights into the factors that contribute to a recipe's success and popularity. This dataset contains recipes and ratings from <a href='food.com'> food.com </a>.
 
