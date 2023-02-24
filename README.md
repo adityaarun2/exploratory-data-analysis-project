@@ -107,5 +107,5 @@ Here, we will conduct permutation tests on two columns against the ``description
 * **Null Hypothesis:** There is no significant difference between the two distributions of the column when the description is missing or not missing.
 * **Alternate Hypothesis:** There is a significant difference between the distributions of the column when the description is missing vs. when the description is not missing.
 
-Additionally, we will be using the **Total Variation Distance (TVD)** as our test statistic in this permutation test since we are dealing with a categorical distribution.
+Additionally, we will be using the **absolute difference of means** as our test statistic in this permutation test since we are dealing with quantitative distributions.
 
