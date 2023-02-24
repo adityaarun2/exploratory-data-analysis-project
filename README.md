@@ -1,9 +1,7 @@
-# Unraveling the Perfect Recipe: Exploring the Connection between Cooking Time and Recipe Ratings
-### Exploring the hidden connection between cooking time and culinary excellence.
+# Exploring the Connection between Cooking Time and Recipe Ratings
 
-Due Date: 2/23/2023 \
-Website Link: <a href='http://adityaarun2.github.io/exploratory-data-analysis-project/'> http://adityaarun2.github.io/exploratory-data-analysis-project/ </a>\
-By Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
+February 23, 2023
+by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ---
 
@@ -17,4 +15,23 @@ This website will serve as a platform to share our findings and visualizations w
 
 ---
 
-### About the data
+### - About the data
+
+The primary dataset used for this analysis is a food.com dataset, which contains information on 83,781 recipes, including ingredients, cooking times, and user ratings.
+The dataset contains 13 columns which are the following:
+
+name: the name of the recipe
+id: the unique recipe id in the website
+contributor_id: the unique id of the recipe contributor
+submitted: date of recipe submission
+tags: keywords linked to the recipe for easy query
+nutrition: nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for "percentage of daily value"
+n_steps: number of steps in recipe
+steps :ext for recipe steps, in order
+description: user-provided description
+
+We used Python and the following libraries to preprocess and analyze the data:
+
+Pandas: for data manipulation and cleaning
+Matplotlib: for data visualization
+Scipy: for statistical analysis and hypothesis testing
