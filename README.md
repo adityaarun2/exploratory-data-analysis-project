@@ -128,8 +128,8 @@ Lastly, in order to measure the difference, we will be using a **absolute differ
 
 (Embed a visualization related to your hypothesis test in your website)
 
----
-
 ### Conclusion
 
 As seen above, the resulting p-value is 0.395 which is greater than our significance level of 0.05. This means that the permutation test was statistically insignificant meaning that we fail to reject the null. In other words, there is likely no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes. This aligns with our observations earlier from the bivariate plots since there was little to no observable visual difference in the group means of the complex vs. simple groups.
+
+---
