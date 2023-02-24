@@ -47,7 +47,7 @@ The dataset contains 13 columns which are the following:
 We used Python and the following libraries to preprocess and analyze the data:
 
 Pandas: for data manipulation and cleaning \
-Matplotlib: for data visualization \
+Plotly: for data visualization \
 Scipy: for statistical analysis and hypothesis testing
 
 ### Why we replace 0 with NaN
