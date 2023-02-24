@@ -1,5 +1,5 @@
 # Unraveling the Perfect Recipe: Exploring the Connection between Cooking Time and Recipe Ratings
-## Exploring the hidden connection between cooking time and culinary excellence.
+### Exploring the hidden connection between cooking time and culinary excellence.
 
 Due Date: 2/23/2023 \
 Website Link: http://adityaarun2.github.io/exploratory-data-analysis-project/ \
