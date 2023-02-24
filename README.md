@@ -16,3 +16,5 @@ The dataset used for this analysis contains information on a variety of recipes,
 This website will serve as a platform to share our findings and visualizations with others. It will include an overview of the project, a description of the dataset and methodology, interactive visualizations, and a conclusion summarizing our key findings.
 
 ---
+
+### About the data
