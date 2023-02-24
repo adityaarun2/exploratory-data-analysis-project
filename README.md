@@ -55,3 +55,10 @@ Scipy: for statistical analysis and hypothesis testing
 The reason why we should replace the ratings of value 0 with NaN is because these ratings are often missing values from people who want to simply comment or forgot to leave an actual review. Thus, we wouldn't want extreme missing values, such as 0, to significantly alter our mean. By replacing 0's with NaN, Pandas automatically ignores the missing values and calculates the mean on the rest of the ratings.
 
 ---
+
+## Cleaning and EDA (Exploratory Data Analysis)
+
+### Data Cleaning
+Here, we remove an outlier recipe that is not really a recipe, but rather a dating advice. Then, we convert the nutrition, tags, steps, and ingredients columns to actual arrays since they are currently represented as a strings. Lastly, we add a complexity column which will help us classify a dish as either simple or complex.
+
+print(recipes.head(10).to_markdown(index=False))
