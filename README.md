@@ -74,8 +74,8 @@ Here, we remove an outlier recipe that is not really a recipe, but rather a dati
 
 Below is the histogram representing the distribution of values for the n_ingredients column. This helps give us a deeper understanding of how many ingredients are contained in each recipe and also explains why 9 ingredients is a good cutoff for determining whether a dish is complex or simple. The red line represents the median value of the distribution and, as you can see, it is centered around 9.
 
-<iframe src="dsc80-2023-wi/projects/03-eda/assets/univariate1plot.html" width=800 height=600 frameBorder=0></iframe> \
-
+<iframe src="dsc80-2023-wi/projects/03-eda/assets/univariate1plot.html" width=800 height=600 frameBorder=0></iframe> 
+<br>
 Below is a histogram showing the distribution of avg_rating for all the recipes. As you can see, the red line represents the mean average rating across all recipes. This plot will be helpful for explaining the bivariate analysis as well.
 
 <iframe src="dsc80-2023-wi/projects/03-eda/assets/univariate2plot.html" width=800 height=600 frameBorder=0></iframe>
