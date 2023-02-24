@@ -14,25 +14,32 @@ The dataset used for this analysis contains information on a variety of recipes,
 
 This website will serve as a platform to share our findings and visualizations with others. It will include an overview of the project, a description of the dataset and methodology, interactive visualizations, and a conclusion summarizing our key findings.
 
----
-
-### - About the data
+### About the data
 
 The primary dataset used for this analysis is a food.com dataset, which contains information on 83,781 recipes, including ingredients, cooking times, and user ratings.
 The dataset contains 13 columns which are the following:
 
-name: the name of the recipe
-id: the unique recipe id in the website
-contributor_id: the unique id of the recipe contributor
-submitted: date of recipe submission
-tags: keywords linked to the recipe for easy query
-nutrition: nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)]; PDV stands for "percentage of daily value"
-n_steps: number of steps in recipe
-steps :ext for recipe steps, in order
-description: user-provided description
+
+| column     |   description |
+|:------------|--------:|
+| name   |       the name of the recipe |
+| id |     the unique recipe id in the website |
+| minutes | time taken in minutes to cook recipe |
+| contributor_id |     the unique id of the recipe contributor |
+| submitted |       date of recipe submission |
+| tags   |      keywords linked to the recipe for easy query |
+| nutrition | nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)] |
+| n_steps |  number of steps in recipe  |
+| steps | text for recipe steps, in order|
+| description | user-provided description |
+| ingredients	| ingredients required for recipe |
+| n_ingredients |	number of ingredients required for recipe |
+| avg_rating | average rating given by users |
 
 We used Python and the following libraries to preprocess and analyze the data:
 
-Pandas: for data manipulation and cleaning
-Matplotlib: for data visualization
+Pandas: for data manipulation and cleaning \
+Matplotlib: for data visualization \
 Scipy: for statistical analysis and hypothesis testing
+
+---
