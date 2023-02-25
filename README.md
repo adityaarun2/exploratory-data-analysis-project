@@ -125,7 +125,7 @@ Additionally, we will be using the **absolute difference of means** as our test 
 
 We will run the permutation test on the following columns: ``n_ingredients`` and ``n_steps``. Below are the resulting p-values of conducting the permutation tests on both columns:
 
-```n_ingredients p-value: 0.002 <br>
+```n_ingredients p-value: 0.002 \
 n_steps p-value: 0.218
 ```
 
