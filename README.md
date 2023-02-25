@@ -123,7 +123,8 @@ Additionally, we will be using the **absolute difference of means** as our test 
 We will run the permutation test on the following columns: ``n_ingredients`` and ``n_steps``. Below are the resulting p-values of conducting the permutation tests on both columns:
 
 ```n_ingredients p-value: 0.002
-n_steps p-value: 0.218```
+n_steps p-value: 0.218
+```
 
 Clearly, the resulting p-value for the number of ingredients is 0.004 which is **less than** 0.05 (our $\alpha$ level). This means that the test was statistically significant, and we can **reject** our null hypothesis. In other words, the missingness of the ``description`` column *likely* does depend on the values of the ``n_ingredients`` column.
 
@@ -148,6 +149,8 @@ Lastly, in order to measure the difference, we will be using a **absolute differ
 
 As seen above, the resulting p-value is 0.395 which is **greater than** our significance level of 0.05. This means that the permutation test was statistically insignificant meaning that we **fail to reject the null**. In other words, there is *likely* no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes. This aligns with our observations earlier from the bivariate plots since there was little to no observable visual difference in the group means between the complex vs. simple groups.
 
-Therefore, this answers our main question of: Do recipes with a higher number of ingredients (complex recipes) receive different ratings on average than those with fewer ingredients (simple recipes)? The hypothesis test we performed showed that it is statistically insignificant 
+Additionally, the plot above clearly shows that our observed difference of means is an expected value under the null hypothesis. This aligns with the result of our p-value so we fail to reject the null hypothesis.
+
+Therefore, this answers our main question of: Do recipes with a higher number of ingredients (complex recipes) receive different ratings on average than those with fewer ingredients (simple recipes)?
 
 ---
