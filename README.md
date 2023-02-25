@@ -81,7 +81,7 @@ Here, we remove an outlier recipe that is not really a recipe, but rather dating
 
 Below is the histogram representing the distribution of values for the n_ingredients column. This helps give us a deeper understanding of how many ingredients are contained in each recipe and also explains why 9 ingredients is a good cutoff for determining whether a dish is complex or simple. The red line represents the median value of the distribution and, as you can see, it is centered around 9.
 
-<iframe src="univariateplot1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="univariate1.html" width=800 height=600 frameBorder=0></iframe>
 
 Below is a histogram showing the distribution of the complexity column for all the recipes.
 
@@ -132,8 +132,8 @@ On the other hand, the resulting p-value for the number of steps is 0.198 which 
 
 As you can see below, we have plotted the distribution of the ``n_ingredients`` column with and without the missing description values. Clearly, the distributions for both plots are quite different, meaning that the a missing description value likely **does** depend on ``n_ingredients`` column.
 
-<iframe src="missingness2.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="missingness1.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="missingness2.html" width=800 height=600 frameBorder=0></iframe>
 ---
 
 ## Hypothesis Testing
@@ -144,6 +144,8 @@ To answer our overarching question, we will conduct a permutation test because w
 * **Alternate Hypothesis:** There is a difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes.
 
 Lastly, in order to measure the difference, we will be using a **absolute difference of means** test statistic because we are comparing two quantitative distributions.
+
+<iframe src="hypothesis_plot.html" width=800 height=600 frameBorder=0></iframe>
 
 ### Conclusion
 
