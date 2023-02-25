@@ -14,6 +14,8 @@ The dataset used for this analysis contains information on a variety of recipes,
 
 This website will serve as a platform to share our findings and visualizations with others. It will include an overview of the project, a description of the dataset and methodology, interactive visualizations, and a conclusion summarizing our key findings.
 
+<img src="recipe.jpeg", alt="Picture of a mobile phone and food", height="100",width="100">
+
 ### Question
 
 The question we are going to investigate with this data is: Do recipes with a higher number of ingredients (complex recipes) receive higher ratings on average than those with fewer ingredients (simple recipes)?
