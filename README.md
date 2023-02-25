@@ -24,6 +24,8 @@ The reason we decided on this question is because we want to investigate whether
 
 Another important aspect of this question is determining the cutoff for a low or high recipe. In order to find this value, we decided to plot the distribution of the n_ingredients column so we could get a general sense of how the recipes in this dataset compare to one another in terms of their ingredient count. The histogram we generated is included below in the Cleaning and EDA section. As you can see, the median of this distribution is around 9. Therefore, we decided to classify recipes with an ingredient count of **9 or less as simple** and recipes with an ingredient count **greater than 9 as complex**. Additionally, choosing the median as the cutoff would help eliminate any sampling bias since we would have an equal amount of data on either side of the median (the median is the 50th percentile). Lastly, 9 ingredients is intuitively a good cutoff. It is reasonable to assume, in general, that a dish with less than 9 ingredients should be fairly simple and easy to make compared to dishes with 10 or more ingredients.
 
+<img src="food critic.jfif", alt="Picture of a food critic", height="100",width="100">
+
 ### About the data
 
 The primary dataset used for this analysis is a food.com dataset, which contains information on 83,781 recipes, including ingredients, cooking times, and user ratings.
@@ -59,6 +61,8 @@ The reason why we should replace the ratings of value 0 with NaN is because thes
 ---
 
 ## Cleaning and EDA (Exploratory Data Analysis)
+
+<img src="Data-Cleaning.jpeg", alt="Picture of a sweeper cleaning data", height="100",width="100">
 
 ### Data Cleaning
 Here, we remove an outlier recipe that is not really a recipe, but rather a dating advice. Then, we convert the nutrition, tags, steps, and ingredients columns to actual arrays since they are currently represented as a strings. Lastly, we add a complexity column which will help us classify a dish as either simple or complex.
