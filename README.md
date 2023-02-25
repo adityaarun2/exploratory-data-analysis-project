@@ -14,7 +14,7 @@ The dataset used for this analysis is collected from <a href='food.com'>food.com
 
 As seen above, we initially started with two DataFrames: ``raw_recipes``, which contains information about recipes and their details, and ``interactions``, which contains information about user reviews and ratings for each recipe. We merged the two datasets on the recipe ``id`` and calculated the average rating for each recipe using aggregate statistics. Finally, we merged the Series containing the average rating for each recipe with the original ``raw_recipes`` DataFrame in the ``avg_rating`` column. This resulted in the ``recipes`` DataFrame which we will use for the rest of the project. 
 
-<img src="recipe.jpeg", alt="Picture of a mobile phone and food", height="100",width="100">
+<img src="recipe.jpeg" alt="Picture of a mobile phone and food" height="100" width="100">
 
 ### Question
 
@@ -24,7 +24,7 @@ The reason we decided on this question is because we want to investigate whether
 
 Another important aspect of this question is determining the cutoff for a low or high recipe. In order to find this value, we decided to plot the distribution of the n_ingredients column so we could get a general sense of how the recipes in this dataset compare to one another in terms of their ingredient count. The histogram we generated is included below in the Cleaning and EDA section. As you can see, the median of this distribution is around 9. Therefore, we decided to classify recipes with an ingredient count of **9 or less as simple** and recipes with an ingredient count **greater than 9 as complex**. Additionally, choosing the median as the cutoff would help eliminate any sampling bias since we would have an equal amount of data on either side of the median (the median is the 50th percentile). Lastly, 9 ingredients is intuitively a good cutoff. It is reasonable to assume, in general, that a dish with less than 9 ingredients should be fairly simple and easy to make compared to dishes with 10 or more ingredients.
 
-<img src="food critic.jfif", alt="Picture of a food critic", height="100",width="100">
+<img src="food critic.jfif" alt="Picture of a food critic" height="100" width="100">
 
 ### About the data
 
@@ -62,7 +62,7 @@ The reason why we should replace the ratings of value 0 with NaN is because thes
 
 ## Cleaning and EDA (Exploratory Data Analysis)
 
-<img src="Data-Cleaning.jpeg", alt="Picture of a sweeper cleaning data", height="100",width="100">
+<img src="Data-Cleaning.jpeg" alt="Picture of a sweeper cleaning data" height="100" width="100">
 
 ### Data Cleaning
 
@@ -81,9 +81,9 @@ Here, we remove an outlier recipe that is not really a recipe, but rather dating
 
 Below is the histogram representing the distribution of values for the n_ingredients column. This helps give us a deeper understanding of how many ingredients are contained in each recipe and also explains why 9 ingredients is a good cutoff for determining whether a dish is complex or simple. The red line represents the median value of the distribution and, as you can see, it is centered around 9.
 
-<iframe src="univariateplot1.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="univariateplot1.html" width=800 height=600 frameBorder=0></iframe>
 
-Below is a histogram showing the distribution of avg_rating for all the recipes. As you can see, the red line represents the mean average rating across all recipes. This plot will be helpful for explaining the bivariate analysis as well.
+Below is a histogram showing the distribution of the complexity column for all the recipes.
 
 <iframe src="univariate2.html" width=800 height=600 frameBorder=0></iframe> 
 
@@ -120,8 +120,19 @@ Additionally, we will be using the **absolute difference of means** as our test 
 
 ### Missingness Dependency
 
-(present and interpret results of your missingness permutation tests with respect to data and question, embed a plotly plot related to missingness exploration)
+We will run the permutation test on the following columns: ``n_ingredients`` and ``n_steps``. Below are the resulting p-values of conducting the permutation tests on both columns:
 
+```n_ingredients p-value: 0.002
+n_steps p-value: 0.218```
+
+Clearly, the resulting p-value for the number of ingredients is 0.004 which is **less than** 0.05 (our $\alpha$ level). This means that the test was statistically significant, and we can **reject** our null hypothesis. In other words, the missingness of the ``description`` column *likely* does depend on the values of the ``n_ingredients`` column.
+
+On the other hand, the resulting p-value for the number of steps is 0.198 which is **greater than** 0.05. This means that the test was **not** statistically significant, and we **fail to reject** our null hypothesis. In other words, the missingness of the ``description`` column *probably* does not depend on the values of the ``n_steps`` column.
+
+As you can see below, we have plotted the distribution of the ``n_ingredients`` column with and without the missing description values. Clearly, the distributions for both plots are quite different, meaning that the a missing description value likely **does** depend on ``n_ingredients`` column.
+
+<iframe src="missingness2.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="missingness1.html" width=800 height=600 frameBorder=0></iframe>
 ---
 
 ## Hypothesis Testing
@@ -135,6 +146,8 @@ Lastly, in order to measure the difference, we will be using a **absolute differ
 
 ### Conclusion
 
-After running the permutation test, the resulting p-value is 0.395 which is greater than our significance level of 0.05. This means that the permutation test was statistically insignificant meaning that we fail to reject the null. In other words, there is likely no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes. This aligns with our observations earlier from the bivariate plots since there was little to no observable visual difference in the group means of the complex vs. simple groups.
+As seen above, the resulting p-value is 0.395 which is **greater than** our significance level of 0.05. This means that the permutation test was statistically insignificant meaning that we **fail to reject the null**. In other words, there is *likely* no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes. This aligns with our observations earlier from the bivariate plots since there was little to no observable visual difference in the group means between the complex vs. simple groups.
+
+Therefore, this answers our main question of: Do recipes with a higher number of ingredients (complex recipes) receive different ratings on average than those with fewer ingredients (simple recipes)? The hypothesis test we performed showed that it is statistically insignificant 
 
 ---
