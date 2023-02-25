@@ -1,7 +1,6 @@
 # Exploring the Connection between Cooking Ingredients and Recipe Ratings
 
 February 23, 2023 \
-https://adityaarun2.github.io/exploratory-data-analysis-project/ \
 by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
 
 ---
@@ -12,9 +11,9 @@ Welcome to the exploratory data analysis project on the relationship between coo
 
 The dataset used for this analysis is collected from <a href='food.com'>food.com</a>. and contains information on a variety of recipes, including their ingredients, cooking times, and user ratings. By exploring this data, we hope to gain insights into the factors that contribute to a recipe’s success and popularity.
 
-As seen above, we initially started with two DataFrames: ``raw_recipes``, which contains information about recipes and their details, and ``interactions``, which contains information about user reviews and ratings for each recipe. We merged the two datasets on the recipe ``id`` and calculated the average rating for each recipe using aggregate statistics. Finally, we merged the Series containing the average rating for each recipe with the original ``raw_recipes`` DataFrame in the ``avg_rating`` column. This resulted in the ``recipes`` DataFrame which we will use for the rest of the project. 
+We initially started with two DataFrames: ``raw_recipes``, which contains information about recipes and their details, and ``interactions``, which contains information about user reviews and ratings for each recipe. We merged the two datasets on the recipe ``id`` and calculated the average rating for each recipe using aggregate statistics. Finally, we merged the Series containing the average rating for each recipe with the original ``raw_recipes`` DataFrame in the ``avg_rating`` column. This resulted in the ``recipes`` DataFrame which we will use for the rest of the project. 
 
-<center><img src="recipe.jpeg" alt="Picture of a mobile phone and food" height="500" width="500"></center>
+<center><img src="recipe.jpeg" alt="Picture of a mobile phone and food" height="400" width="500"></center>
 
 ### Question
 
@@ -22,13 +21,13 @@ The question we are going to investigate with this data is: Do recipes with a hi
 
 The reason we decided on this question is because we want to investigate whether people tend to rate more complicated recipes higher compared to simpler recipes. This would be important to consider when looking at the data above because the values of the ratings for a given recipe may be correlated with its complexity (in this case, the complexity is the number of ingredients since recipes with more ingredients are usually more complicated). However, complicated recipes might be more rewarding and ultimately a tastier dish compared to simpler recipes. After considering these nuances, answering this question can be helpful in determining why a certain recipe is rated a certain way.
 
-Another important aspect of this question is determining the cutoff for a low or high recipe. In order to find this value, we decided to plot the distribution of the n_ingredients column so we could get a general sense of how the recipes in this dataset compare to one another in terms of their ingredient count. The histogram we generated is included below in the Cleaning and EDA section. As you can see, the median of this distribution is around 9. Therefore, we decided to classify recipes with an ingredient count of **9 or less as simple** and recipes with an ingredient count **greater than 9 as complex**. Additionally, choosing the median as the cutoff would help eliminate any sampling bias since we would have an equal amount of data on either side of the median (the median is the 50th percentile). Lastly, 9 ingredients is intuitively a good cutoff. It is reasonable to assume, in general, that a dish with less than 9 ingredients should be fairly simple and easy to make compared to dishes with 10 or more ingredients.
-
 <center><img src="food critic.jfif" alt="Picture of a food critic" height="500" width="500"></center>
+
+Another important aspect of this question is determining the cutoff for a low or high recipe. In order to find this value, we decided to plot the distribution of the n_ingredients column so we could get a general sense of how the recipes in this dataset compare to one another in terms of their ingredient count. The histogram we generated is included below in the Cleaning and EDA section. As you can see, the median of this distribution is around 9. Therefore, we decided to classify recipes with an ingredient count of **9 or less as simple** and recipes with an ingredient count **greater than 9 as complex**. Additionally, choosing the median as the cutoff would help eliminate any sampling bias since we would have an equal amount of data on either side of the median (the median is the 50th percentile). Lastly, 9 ingredients is intuitively a good cutoff. It is reasonable to assume, in general, that a dish with less than 9 ingredients should be fairly simple and easy to make compared to dishes with 10 or more ingredients.
 
 ### About the data
 
-The primary dataset used for this analysis is a food.com dataset, which contains information on 83,781 recipes, including ingredients, cooking times, and user ratings.
+The primary dataset used for this analysis is a <a href="food.com">food.com</a> dataset, which contains information on 83,781 recipes, including ingredients, cooking times, and user ratings.
 The dataset contains 13 columns which are the following:
 
 
@@ -83,13 +82,13 @@ Below is the histogram representing the distribution of values for the n_ingredi
 
 <iframe src="univariate1.html" width=800 height=600 frameBorder=0></iframe>
 
-Below is a histogram showing the distribution of the complexity column for all the recipes.
+Below is a histogram showing the distribution of the complexity column for all the recipes. As we can see, there are slightly lesser recipes in the complex catrgory compared to the simple category.
 
 <iframe src="univariate2.html" width=800 height=600 frameBorder=0></iframe> 
 
 ### Bivariate Analysis
 
-Below is a bar chart which examines the mean avg_rating for simple recipes vs. complex recipes. The plot shows that the mean is about the same for each group because, as seen in the histogram above, most of the ratings across all recipes are 5. Therefore, when we group the number of ingredients, we would expect that the average rating across groups is close to 5.
+Below is a bar chart which examines the mean ``avg_rating`` for simple recipes vs. complex recipes. We can infer that the mean for each complexity group is about the same.
 
 <iframe src="bivariateplot1.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -113,6 +112,8 @@ A column that could be Not Missing at Random (NMAR) within our ``recipes`` DataF
 
 An additional column of data that might help explain this missingness and make it Missing at Random (MAR) is the number of visits to the recipe's webpage. If this value is extremely low for a given recipe, then it might help explain why its ``avg_rating`` is missing, thus making the missingness MAR.
 
+### Missingness Dependency 
+
 The columns in the ``recipes`` DataFrame that contain missing values are: ``name``, ``description``, and ``avg_rating``.
 
 Here, we will conduct permutation tests on two columns against the ``description_missing`` column in order to determine whether the ``description`` column is Missing at Random (MAR) since it would depend on the values of that other column. In order to conduct the test, we will consider the following hypotheses with an 𝛼 of 0.05:
@@ -122,15 +123,13 @@ Here, we will conduct permutation tests on two columns against the ``description
 
 Additionally, we will be using the **absolute difference of means** as our test statistic in this permutation test since we are dealing with quantitative distributions.
 
-### Missingness Dependency
-
 We will run the permutation test on the following columns: ``n_ingredients`` and ``n_steps``. Below are the resulting p-values of conducting the permutation tests on both columns:
 
-```n_ingredients p-value: 0.002
+```n_ingredients p-value: 0.002 <br>
 n_steps p-value: 0.218
 ```
 
-Clearly, the resulting p-value for the number of ingredients is 0.004 which is **less than** 0.05 (our $\alpha$ level). This means that the test was statistically significant, and we can **reject** our null hypothesis. In other words, the missingness of the ``description`` column *likely* does depend on the values of the ``n_ingredients`` column.
+Clearly, the resulting p-value for the number of ingredients is 0.004 which is **less than** 0.05 (our 𝛼 level). This means that the test was statistically significant, and we can **reject** our null hypothesis. In other words, the missingness of the ``description`` column *likely* does depend on the values of the ``n_ingredients`` column.
 
 On the other hand, the resulting p-value for the number of steps is 0.198 which is **greater than** 0.05. This means that the test was **not** statistically significant, and we **fail to reject** our null hypothesis. In other words, the missingness of the ``description`` column *probably* does not depend on the values of the ``n_steps`` column.
 
@@ -147,7 +146,7 @@ To answer our overarching question, we will conduct a permutation test because w
 * **Null Hypothesis:** There is no difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes.
 * **Alternate Hypothesis:** There is a difference between the mean average ratings of simple recipes versus the mean average ratings of complex recipes.
 
-Lastly, in order to measure the difference, we will be using a **absolute difference of means** test statistic because we are comparing two quantitative distributions.
+Lastly, in order to measure the difference, we will be using a **absolute difference of means** test statistic because we are comparing two quantitative distributions. Additionally, in our alternate hypothesis, we are simply measuring difference, not direction. Therefore, the absolute difference of means statistic is the correct choice for this test.
 
 <iframe src="hypothesis_plot.html" width=800 height=600 frameBorder=0></iframe>
 
