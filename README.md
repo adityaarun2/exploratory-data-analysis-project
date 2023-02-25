@@ -109,6 +109,10 @@ Grouping the number of ingredients and examining the aggregate statistics mean c
 
 ### NMAR Analysis
 
+A column that could be Not Missing at Random (NMAR) within our ``recipes`` DataFrame could be the ``avg_rating`` column. A possible reason why these values could be missing is that users simply did not want to rate the recipe. For example, if a person visited a recipe's webpage and did not find it appealing, then they would not leave a rating. In other words, a certain recipe may be missing its ``avg_rating`` if an insufficient amount of people try it and leave a rating.
+
+An additional column of data that might help explain this missingness and make it Missing at Random (MAR) is the number of visits to the recipe's webpage. If this value is extremely low for a given recipe, then it might help explain why its ``avg_rating`` is missing, thus making the missingness MAR.
+
 The columns in the ``recipes`` DataFrame that contain missing values are: ``name``, ``description``, and ``avg_rating``.
 
 Here, we will conduct permutation tests on two columns against the ``description_missing`` column in order to determine whether the ``description`` column is Missing at Random (MAR) since it would depend on the values of that other column. In order to conduct the test, we will consider the following hypotheses with an 𝛼 of 0.05:
