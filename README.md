@@ -125,9 +125,8 @@ Additionally, we will be using the **absolute difference of means** as our test 
 
 We will run the permutation test on the following columns: ``n_ingredients`` and ``n_steps``. Below are the resulting p-values of conducting the permutation tests on both columns:
 
-```n_ingredients p-value: 0.002 \
-n_steps p-value: 0.218
-```
+``n_ingredients p-value: 0.002``
+``n_steps p-value: 0.218``
 
 Clearly, the resulting p-value for the number of ingredients is 0.004 which is **less than** 0.05 (our 𝛼 level). This means that the test was statistically significant, and we can **reject** our null hypothesis. In other words, the missingness of the ``description`` column *likely* does depend on the values of the ``n_ingredients`` column.
 
@@ -137,6 +136,7 @@ As you can see below, we have plotted the distribution of the ``n_ingredients`` 
 
 <iframe src="missingness1.html" width=800 height=600 frameBorder=0></iframe>
 <iframe src="missingness2.html" width=800 height=600 frameBorder=0></iframe>
+
 ---
 
 ## Hypothesis Testing
