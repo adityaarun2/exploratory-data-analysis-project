@@ -85,7 +85,7 @@ Below is the histogram representing the distribution of values for the n_ingredi
 
 Below is a histogram showing the distribution of avg_rating for all the recipes. As you can see, the red line represents the mean average rating across all recipes. This plot will be helpful for explaining the bivariate analysis as well.
 
-<iframe src="univariateplot2.html" width=800 height=600 frameBorder=0></iframe> 
+<iframe src="univariate2.html" width=800 height=600 frameBorder=0></iframe> 
 
 ### Bivariate Analysis
 
