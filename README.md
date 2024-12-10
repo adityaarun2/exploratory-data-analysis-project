@@ -1,10 +1,3 @@
-# Exploring the Connection between Cooking Ingredients and Recipe Ratings
-
-23 February, 2023 \
-by Mohit Sridhar (msridhar@ucsd.edu) and Aditya Arun (adarun@ucsd.edu)
-
----
-
 ## Introduction
 
 Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! In this project, we will aim to investigate whether there is a correlation between the complexity of a recipe and how highly it is rated by users.
