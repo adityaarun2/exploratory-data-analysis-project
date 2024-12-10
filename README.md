@@ -1,3 +1,5 @@
+# The Great Recipe Rating Race: Using Machine Learning to Help You Cook Like a Pro
+
 ## Introduction
 
 Welcome to the exploratory data analysis project on the relationship between cooking ingredients and average rating of recipes! In this project, we will aim to investigate whether there is a correlation between the complexity of a recipe and how highly it is rated by users.
